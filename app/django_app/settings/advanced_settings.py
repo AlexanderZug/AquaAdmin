@@ -7,7 +7,7 @@ load_dotenv(BASE_DIR.parent.parent / ".env")
 
 INSTALLED_APPS += ["drf_yasg", "rest_framework", "drf_spectacular"]
 
-FRONTEND_MODULES = ["api"]
+FRONTEND_MODULES = ["api", "aquarium"]
 
 INSTALLED_APPS += FRONTEND_MODULES
 
@@ -22,7 +22,7 @@ TIME_ZONE = "Europe/Berlin"
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "secret_key")
 
-DEBUG = os.environ.get("DEBUG", False)
+DEBUG = os.environ.get("DEBUG", True)
 ALLOWED_HOSTS = [os.environ.get("DJANGO_ALLOWED_HOSTS", "*")]
 LOCAL_DATABASE = os.environ.get("LOCAL_DATABASE", True)
 
@@ -49,8 +49,8 @@ else:
         }
     }
 
-PROJECT_NAME = "Template"
-PROJECT_DESCRIPTION = "Django Template"
+PROJECT_NAME = "AquaAdmin"
+PROJECT_DESCRIPTION = "AquaAdmin"
 API_INFO = {
     "title": f"{PROJECT_NAME} API",
     "description": f"API for {PROJECT_DESCRIPTION}",

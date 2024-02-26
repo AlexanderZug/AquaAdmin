@@ -5,7 +5,7 @@ SHELL := /bin/bash
 APPNAME := app
 CONTAINER_IMAGE_NAME_PROD := ${APPNAME}-prod
 PYTHON_VERSION := 3.12.1
-PYTHON_VENV := venv
+PYTHON_VENV := venv-aqua
 APPFOLDER := app
 
 #
