@@ -9,7 +9,7 @@ class Aquarium(models.Model):
         blank=True,
         help_text="Name des Aquariums. Falls nicht angegeben, wird ein Standardname verwendet.",
     )
-    volume = models.IntegerField("Volume (L)")
+    volume = models.PositiveIntegerField("Volume (L)")
     length = models.DecimalField(
         "Lange (cm)",
         max_digits=10,
@@ -50,7 +50,6 @@ class Aquarium(models.Model):
         verbose_name_plural = "Aquarien"
         ordering = ["-created_at"]
 
-    @property
     def set_default_name(self):
         if not self.name:
             self.name = "-"

@@ -7,7 +7,11 @@ load_dotenv(BASE_DIR.parent.parent / ".env")
 
 INSTALLED_APPS += ["drf_yasg", "rest_framework", "drf_spectacular"]
 
-FRONTEND_MODULES = ["api", "aquarium"]
+FRONTEND_MODULES = [
+    "api",
+    "aquarium",
+    "fish",
+]
 
 INSTALLED_APPS += FRONTEND_MODULES
 
