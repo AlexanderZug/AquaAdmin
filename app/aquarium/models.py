@@ -42,13 +42,13 @@ class Aquarium(models.Model):
         help_text="Datum des letzten Redesigns, falls zutreffend.",
     )
 
-    def __str__(self):
-        return self.name if self.name else "-"
-
     class Meta:
         verbose_name = "Aquarium"
         verbose_name_plural = "Aquarien"
         ordering = ["-created_at"]
+
+    def __str__(self):
+        return self.name if self.name else "-"
 
     def set_default_name(self):
         if not self.name:

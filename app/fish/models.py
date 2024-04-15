@@ -72,6 +72,11 @@ class Sale(models.Model):
         help_text="Datum des Verkaufs.",
     )
 
+    class Meta:
+        verbose_name = "Verkauf"
+        verbose_name_plural = "Verkäufe"
+        ordering = ["-created_at"]
+
     def __str__(self):
         return self.fish.name
 
@@ -85,11 +90,6 @@ class Sale(models.Model):
         self.fish.amount -= self.amount
         self.fish.save()
         super().save(*args, **kwargs)
-
-    class Meta:
-        verbose_name = "Verkauf"
-        verbose_name_plural = "Verkäufe"
-        ordering = ["-created_at"]
 
 
 class Died(models.Model):
@@ -108,6 +108,11 @@ class Died(models.Model):
         help_text="Datum des Todes.",
     )
 
+    class Meta:
+        verbose_name = "Tod"
+        verbose_name_plural = "Tode"
+        ordering = ["-created_at"]
+
     def __str__(self):
         return self.fish.name
 
@@ -115,8 +120,3 @@ class Died(models.Model):
         self.fish.amount -= self.amount
         self.fish.save()
         super().save(*args, **kwargs)
-
-    class Meta:
-        verbose_name = "Tod"
-        verbose_name_plural = "Tode"
-        ordering = ["-created_at"]
