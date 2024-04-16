@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -13,6 +13,7 @@ urlpatterns = [
     path(
         "swagger/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"
     ),
+    path("aquarium/", include("aquarium.urls")),
 ]
 
 urlpatterns += base_url_patterns
