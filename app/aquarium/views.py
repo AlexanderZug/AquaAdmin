@@ -6,7 +6,7 @@ from .models import Aquarium
 from .serializers import AquariumListSerializer
 
 
-class AquariumListView(ListAPIView):
+class AquariumListAPIView(ListAPIView):
     queryset = Aquarium.objects.all()
     serializer_class = AquariumListSerializer
     permission_classes = [AllowAny]

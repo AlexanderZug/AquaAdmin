@@ -14,6 +14,8 @@ urlpatterns = [
         "swagger/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"
     ),
     path("aquarium/", include("aquarium.urls")),
+    path("fish/", include("fish.urls")),
 ]
 
 urlpatterns += base_url_patterns
+urlpatterns += [path("silk/", include("silk.urls", namespace="silk"))]

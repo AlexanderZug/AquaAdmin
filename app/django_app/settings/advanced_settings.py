@@ -1,11 +1,18 @@
 import os
+
 from dotenv import load_dotenv
 
 from .settings import *
 
 load_dotenv(BASE_DIR.parent.parent / ".env")
 
-INSTALLED_APPS += ["drf_yasg", "rest_framework", "drf_spectacular"]
+INSTALLED_APPS += [
+    "drf_yasg",
+    "rest_framework",
+    "drf_spectacular",
+    "bootstrap_new",
+    "silk",
+]
 
 FRONTEND_MODULES = [
     "api",

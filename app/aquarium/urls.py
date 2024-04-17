@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import AquariumListView
+from .views import AquariumListAPIView
 
 urlpatterns = [
-    path("", AquariumListView.as_view(), name="aquarium-list"),
+    path("", AquariumListAPIView.as_view(), name="aquarium-list"),
 ]
