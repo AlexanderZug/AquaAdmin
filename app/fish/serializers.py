@@ -42,3 +42,10 @@ class FishListSerializer(serializers.ModelSerializer):
             "sales",
             "died",
         ]
+
+
+class FishCreateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Fish
+        fields = "__all__"
