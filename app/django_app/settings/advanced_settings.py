@@ -12,6 +12,19 @@ INSTALLED_APPS += [
     "drf_spectacular",
     "bootstrap_new",
     "silk",
+    "wagtail.contrib.forms",
+    "wagtail.contrib.redirects",
+    "wagtail.embeds",
+    "wagtail.sites",
+    "wagtail.users",
+    "wagtail.snippets",
+    "wagtail.documents",
+    "wagtail.images",
+    "wagtail.search",
+    "wagtail.admin",
+    "wagtail",
+    "modelcluster",
+    "taggit",
 ]
 
 FRONTEND_MODULES = [
@@ -62,12 +75,13 @@ else:
 
 PROJECT_NAME = "AquaAdmin"
 PROJECT_DESCRIPTION = "AquaAdmin"
+WAGTAIL_SITE_NAME = PROJECT_NAME
 API_INFO = {
     "title": f"{PROJECT_NAME} API",
     "description": f"API for {PROJECT_DESCRIPTION}",
     "version": "1.0.0",
 }
-
+WAGTAILADMIN_BASE_URL = "http://example.com"
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
